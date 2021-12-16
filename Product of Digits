@@ -1,0 +1,13 @@
+package Recursion;
+
+public class ProductOfDigit {
+    public static void main(String[] args) {
+        System.out.println(productofNum(12540));
+    }
+    static int productofNum(int n){
+        if (n%10 == n){
+            return n;
+        }
+        return productofNum(n%10)*productofNum(n/10);
+    }
+}
