@@ -1,0 +1,15 @@
+public class Main{
+    public static void main (String[] args) {
+        reverseDigit(123);
+        System.out.println(sum);
+    }
+    static int sum = 0;
+    static int reverseDigit(int n){
+        if (n == 0){
+            return 0;
+        } 
+        int remainder = n%10;
+        sum = sum * 10 + remainder;
+        return reverseDigit(n/10);
+    }
+}
