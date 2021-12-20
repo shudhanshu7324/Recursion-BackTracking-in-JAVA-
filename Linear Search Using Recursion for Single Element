@@ -1,0 +1,19 @@
+package Recursion.ArrayUsingRecursion;
+
+public class LinearSearchUR {
+    public static void main(String[] args) {
+        int array[] = {12,7,34,9,18,3};
+        System.out.println(linearSearch(array,12,0));
+    }
+
+    public static int linearSearch(int[] array,int target,int index){
+        if (index == array.length){
+            return -1;
+        }
+        if (array[index] == target){
+            return index;
+        }else {
+            return linearSearch(array,target,index+1);
+        }
+    }
+}
