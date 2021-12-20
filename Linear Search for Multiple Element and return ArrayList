@@ -1,0 +1,23 @@
+package Recursion.ArrayUsingRecursion;
+
+import java.util.ArrayList;
+
+public class AllElementInArray {
+    public static void main(String[] args) {
+        int[] array = {3,6,4,71,26,9,68};
+        allIndex(array,71,0);
+        allIndex(array,9,0);
+        allIndex(array,4,0);
+        System.out.println(list);
+    }
+    static ArrayList<Integer> list = new ArrayList<>();
+    public static void allIndex(int[] array,int target,int index){
+        if (index == array.length){
+            return;
+        }
+        if (array[index] == target){
+            list.add(index);
+        }
+        allIndex(array,target,index+1);
+    }
+}
